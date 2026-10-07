@@ -6,14 +6,16 @@
 
     <title>Krishnapriya Doraiswamy | Data Analyst</title>
 
-    <meta name="description"
-          content="Krishnapriya Doraiswamy — Data Analyst specialising in SQL, Power BI, Python, data quality and analytics.">
+    <meta
+        name="description"
+        content="Krishnapriya Doraiswamy — Data Analyst specialising in SQL, Python, Business Intelligence and data analytics."
+    >
 
     <style>
 
-        /* =========================
+        /* =====================================================
            RESET
-        ========================= */
+        ===================================================== */
 
         * {
             margin: 0;
@@ -26,10 +28,18 @@
         }
 
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f7f7f4;
-            color: #111;
-            line-height: 1.5;
+            font-family:
+                Inter,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Arial,
+                sans-serif;
+
+            background: #f5f4ef;
+            color: #171717;
+
+            min-height: 100vh;
         }
 
         a {
@@ -37,484 +47,548 @@
             text-decoration: none;
         }
 
-        /* =========================
-           GLOBAL
-        ========================= */
+
+        /* =====================================================
+           PAGE
+        ===================================================== */
 
         .page {
-            width: 100%;
+            min-height: 100vh;
+            position: relative;
+            overflow: hidden;
         }
 
-        .container {
-            width: min(1400px, 92%);
-            margin: auto;
+
+        /* =====================================================
+           BACKGROUND GRID
+        ===================================================== */
+
+        .page::before {
+            content: "";
+
+            position: absolute;
+            inset: 0;
+
+            background-image:
+                linear-gradient(
+                    to right,
+                    rgba(0,0,0,0.035) 1px,
+                    transparent 1px
+                ),
+                linear-gradient(
+                    to bottom,
+                    rgba(0,0,0,0.035) 1px,
+                    transparent 1px
+                );
+
+            background-size: 80px 80px;
+
+            pointer-events: none;
         }
 
-        section {
-            width: 100%;
-            padding: 110px 0;
-            border-top: 1px solid #d8d8d3;
-        }
 
-        .section-number {
-            font-size: 13px;
-            font-weight: 700;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            margin-bottom: 25px;
-        }
-
-        h1, h2, h3, h4 {
-            font-weight: 500;
-            letter-spacing: -0.04em;
-        }
-
-        h2 {
-            font-size: clamp(42px, 6vw, 85px);
-            line-height: 0.95;
-            margin-bottom: 45px;
-        }
-
-        .muted {
-            color: #777;
-        }
-
-        /* =========================
-           NAVIGATION
-        ========================= */
+        /* =====================================================
+           HEADER
+        ===================================================== */
 
         header {
+            position: relative;
+            z-index: 10;
+
             width: 100%;
-            padding: 25px 0;
-            border-bottom: 1px solid #d8d8d3;
+
+            padding: 28px 5%;
+
+            border-bottom: 1px solid rgba(0,0,0,0.12);
         }
 
         nav {
-            width: min(1400px, 92%);
-            margin: auto;
-
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .logo {
+            font-size: 13px;
             font-weight: 700;
-            font-size: 15px;
+
+            letter-spacing: 0.12em;
         }
 
-        .nav-links {
-            display: flex;
-            gap: 30px;
-            font-size: 14px;
-        }
-
-        .nav-links a {
-            transition: opacity 0.2s ease;
-        }
-
-        .nav-links a:hover {
-            opacity: 0.45;
-        }
-
-        /* =========================
-           HERO
-        ========================= */
-
-        .hero {
-            min-height: 90vh;
+        .nav-right {
             display: flex;
             align-items: center;
+            gap: 30px;
+
+            font-size: 12px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+
+            color: #777;
+        }
+
+        .status {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .status-dot {
+            width: 7px;
+            height: 7px;
+
+            border-radius: 50%;
+
+            background: #667f5d;
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .hero {
+            position: relative;
+            z-index: 2;
+
+            width: 90%;
+            max-width: 1500px;
+
+            min-height: calc(100vh - 78px);
+
+            margin: auto;
+
+            display: flex;
+            align-items: center;
+
             padding: 80px 0 120px;
         }
 
-        .hero-grid {
+        .hero-content {
+            width: 100%;
+        }
+
+
+        /* =====================================================
+           SMALL INTRO
+        ===================================================== */
+
+        .eyebrow {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            margin-bottom: 35px;
+
+            font-size: 12px;
+            font-weight: 600;
+
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+
+            color: #666;
+        }
+
+        .eyebrow-line {
+            width: 45px;
+            height: 1px;
+
+            background: #171717;
+        }
+
+
+        /* =====================================================
+           MAIN NAME
+        ===================================================== */
+
+        .name {
+            font-size: clamp(
+                75px,
+                13vw,
+                205px
+            );
+
+            font-weight: 500;
+
+            line-height: 0.78;
+
+            letter-spacing: -0.085em;
+
+            max-width: 1400px;
+        }
+
+        .name span {
+            display: block;
+        }
+
+        .name .last-name {
+            color: #777;
+        }
+
+
+        /* =====================================================
+           LOWER HERO
+        ===================================================== */
+
+        .hero-lower {
+            margin-top: 75px;
+
             display: grid;
-            grid-template-columns: 1.5fr 1fr;
-            gap: 80px;
+
+            grid-template-columns:
+                minmax(250px, 1fr)
+                minmax(350px, 1.2fr);
+
+            gap: 100px;
+
             align-items: end;
         }
 
-        .hero h1 {
-            font-size: clamp(70px, 13vw, 180px);
-            line-height: 0.8;
-            letter-spacing: -0.075em;
+
+        /* =====================================================
+           DESCRIPTION
+        ===================================================== */
+
+        .description {
+            max-width: 550px;
+
+            font-size: clamp(
+                22px,
+                2.4vw,
+                34px
+            );
+
+            line-height: 1.2;
+
+            letter-spacing: -0.035em;
         }
 
-        .hero-description {
-            max-width: 480px;
-            font-size: 21px;
-            line-height: 1.4;
-        }
-
-        .hero-stats {
-            margin-top: 55px;
-
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
-
-        .stat {
-            border-top: 1px solid #aaa;
-            padding-top: 15px;
-        }
-
-        .stat-number {
-            font-size: 30px;
+        .description strong {
             font-weight: 500;
         }
 
-        .stat-label {
-            font-size: 13px;
-            color: #777;
-            margin-top: 5px;
-        }
 
-        .hero-buttons {
-            margin-top: 45px;
+        /* =====================================================
+           BUTTONS
+        ===================================================== */
+
+        .actions {
             display: flex;
             gap: 12px;
+
+            margin-top: 38px;
+
             flex-wrap: wrap;
         }
 
         .button {
-            display: inline-block;
-            border: 1px solid #111;
-            padding: 13px 22px;
-            font-size: 14px;
-            transition: all 0.2s ease;
+            position: relative;
+
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            gap: 14px;
+
+            min-width: 155px;
+
+            padding: 16px 22px;
+
+            border: 1px solid #171717;
+
+            font-size: 13px;
+            font-weight: 600;
+
+            letter-spacing: 0.02em;
+
+            overflow: hidden;
+
+            transition:
+                color 0.3s ease,
+                transform 0.3s ease;
+        }
+
+        .button::before {
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background: #171717;
+
+            transform: translateY(101%);
+
+            transition:
+                transform 0.3s ease;
+        }
+
+        .button span {
+            position: relative;
+            z-index: 2;
         }
 
         .button:hover {
-            background: #111;
             color: #fff;
+
+            transform: translateY(-3px);
         }
 
-        /* =========================
-           INTRO / STATEMENT
-        ========================= */
-
-        .statement {
-            max-width: 1050px;
-            font-size: clamp(30px, 4vw, 58px);
-            line-height: 1.05;
-            letter-spacing: -0.045em;
+        .button:hover::before {
+            transform: translateY(0);
         }
 
-        /* =========================
-           PROJECTS
-        ========================= */
-
-        .projects-intro {
-            max-width: 650px;
-            font-size: 19px;
-            color: #666;
-            margin-bottom: 60px;
+        .arrow {
+            transition: transform 0.3s ease;
         }
 
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2px;
-            background: #d8d8d3;
-            border: 1px solid #d8d8d3;
+        .button:hover .arrow {
+            transform: translateX(5px);
         }
 
-        .project {
-            background: #f7f7f4;
-            padding: 40px;
 
-            min-height: 390px;
+        /* =====================================================
+           RIGHT INFORMATION
+        ===================================================== */
 
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+        .hero-info {
+            border-top: 1px solid rgba(0,0,0,0.25);
 
-            transition: background 0.25s ease;
-        }
-
-        .project:hover {
-            background: #eeeeea;
-        }
-
-        .project-top {
-            display: flex;
-            justify-content: space-between;
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-        }
-
-        .project h3 {
-            font-size: 38px;
-            line-height: 1;
-            margin: 45px 0 20px;
-        }
-
-        .project p {
-            max-width: 600px;
-            color: #666;
-            font-size: 16px;
-        }
-
-        .tags {
-            margin-top: 25px;
-
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-        }
-
-        .tag {
-            border: 1px solid #c9c9c4;
-            padding: 5px 10px;
-            font-size: 11px;
-            text-transform: uppercase;
-        }
-
-        /* =========================
-           EXPERIENCE
-        ========================= */
-
-        .experience {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 80px;
-        }
-
-        .experience-list {
-            border-top: 1px solid #aaa;
-        }
-
-        .experience-item {
-            padding: 30px 0;
-            border-bottom: 1px solid #aaa;
+            padding-top: 18px;
 
             display: grid;
-            grid-template-columns: 180px 1fr;
-            gap: 30px;
-        }
 
-        .experience-date {
-            color: #777;
-            font-size: 14px;
-        }
-
-        .experience-item h3 {
-            font-size: 28px;
-            margin-bottom: 8px;
-        }
-
-        .experience-company {
-            font-size: 15px;
-            margin-bottom: 15px;
-        }
-
-        .experience-item p {
-            color: #666;
-            max-width: 700px;
-        }
-
-        /* =========================
-           SKILLS
-        ========================= */
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2px;
-            background: #d8d8d3;
-            border: 1px solid #d8d8d3;
-        }
-
-        .skill-box {
-            background: #f7f7f4;
-            padding: 35px;
-            min-height: 250px;
-        }
-
-        .skill-box h3 {
-            font-size: 27px;
-            margin-bottom: 30px;
-        }
-
-        .skill-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .skill {
-            padding: 7px 11px;
-            border: 1px solid #ccc;
-            font-size: 13px;
-        }
-
-        /* =========================
-           ABOUT
-        ========================= */
-
-        .about-grid {
-            display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 100px;
+
+            gap: 35px;
         }
 
-        .about-text {
-            font-size: 24px;
-            line-height: 1.3;
+        .info-item small {
+            display: block;
+
+            margin-bottom: 9px;
+
+            font-size: 10px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.13em;
+
+            color: #888;
         }
 
-        .about-details {
-            font-size: 16px;
-            color: #666;
+        .info-item p {
+            font-size: 14px;
+            line-height: 1.5;
         }
 
-        .about-details p {
-            margin-bottom: 25px;
+
+        /* =====================================================
+           DECORATIVE NUMBER
+        ===================================================== */
+
+        .number {
+            position: absolute;
+
+            right: -15px;
+            top: 48%;
+
+            font-size: 12px;
+
+            color: #999;
+
+            writing-mode: vertical-rl;
+
+            letter-spacing: 0.15em;
         }
 
-        /* =========================
-           CONTACT
-        ========================= */
 
-        .contact {
-            min-height: 70vh;
+        /* =====================================================
+           BOTTOM BAR
+        ===================================================== */
+
+        .bottom-bar {
+            position: absolute;
+
+            bottom: 28px;
+
+            left: 5%;
+            right: 5%;
+
             display: flex;
-            align-items: center;
-        }
 
-        .contact h2 {
-            max-width: 1000px;
-            margin-bottom: 40px;
-        }
-
-        .email {
-            font-size: clamp(25px, 4vw, 55px);
-            border-bottom: 2px solid #111;
-            display: inline-block;
-            letter-spacing: -0.04em;
-        }
-
-        /* =========================
-           FOOTER
-        ========================= */
-
-        footer {
-            border-top: 1px solid #d8d8d3;
-            padding: 30px 0;
-        }
-
-        .footer-inner {
-            width: min(1400px, 92%);
-            margin: auto;
-
-            display: flex;
             justify-content: space-between;
-            font-size: 13px;
-            color: #777;
+
+            align-items: center;
+
+            font-size: 10px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.14em;
+
+            color: #888;
         }
 
-        /* =========================
+
+        /* =====================================================
+           ANIMATIONS
+        ===================================================== */
+
+        .fade-up {
+            opacity: 0;
+
+            transform: translateY(30px);
+
+            animation:
+                fadeUp 0.8s
+                cubic-bezier(.2,.7,.2,1)
+                forwards;
+        }
+
+        .delay-1 {
+            animation-delay: 0.1s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-3 {
+            animation-delay: 0.35s;
+        }
+
+        .delay-4 {
+            animation-delay: 0.5s;
+        }
+
+        @keyframes fadeUp {
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+
+        /* =====================================================
            MOBILE
-        ========================= */
+        ===================================================== */
 
-        @media (max-width: 900px) {
+        @media (max-width: 850px) {
 
-            .hero-grid,
-            .experience,
-            .about-grid {
-                grid-template-columns: 1fr;
-                gap: 50px;
+            header {
+                padding: 22px 6%;
             }
 
-            .hero {
-                min-height: auto;
-                padding: 80px 0;
-            }
-
-            .hero h1 {
-                font-size: 19vw;
-            }
-
-            .project-grid,
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .experience-item {
-                grid-template-columns: 1fr;
-                gap: 10px;
-            }
-
-            .hero-stats {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .nav-links {
-                gap: 15px;
-            }
-        }
-
-        @media (max-width: 600px) {
-
-            section {
-                padding: 75px 0;
-            }
-
-            .nav-links {
+            .nav-right {
                 display: none;
             }
 
-            .hero-description {
-                font-size: 18px;
+            .hero {
+                width: 88%;
+
+                min-height: calc(100vh - 70px);
+
+                padding:
+                    70px 0
+                    100px;
             }
 
-            .project {
-                padding: 28px;
-                min-height: 340px;
+            .name {
+                font-size: 19vw;
             }
 
-            .project h3 {
-                font-size: 31px;
-            }
+            .hero-lower {
 
-            .hero-stats {
                 grid-template-columns: 1fr;
+
+                gap: 55px;
+
+                margin-top: 60px;
             }
 
-            .footer-inner {
+            .hero-info {
+                max-width: 600px;
+            }
+
+            .number {
+                display: none;
+            }
+
+            .bottom-bar {
+                display: none;
+            }
+        }
+
+
+        @media (max-width: 500px) {
+
+            .logo {
+                font-size: 11px;
+            }
+
+            .eyebrow {
+                font-size: 10px;
+            }
+
+            .name {
+                font-size: 21vw;
+
+                line-height: 0.82;
+            }
+
+            .description {
+                font-size: 21px;
+            }
+
+            .actions {
                 flex-direction: column;
-                gap: 10px;
+                align-items: stretch;
+            }
+
+            .button {
+                width: 100%;
+            }
+
+            .hero-info {
+                grid-template-columns: 1fr;
+                gap: 22px;
             }
         }
 
     </style>
 </head>
 
+
 <body>
 
 <div class="page">
 
-    <!-- =========================
-         NAVIGATION
-    ========================== -->
+
+    <!-- ================= HEADER ================= -->
 
     <header>
 
         <nav>
 
-            <a href="#" class="logo">
-                KRISHNAPRIYA DORAISWAMY
-            </a>
+            <div class="logo">
+                KD
+            </div>
 
-            <div class="nav-links">
-                <a href="#work">Work</a>
-                <a href="#experience">Experience</a>
-                <a href="#skills">Skills</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
+            <div class="nav-right">
+
+                <div class="status">
+                    <span class="status-dot"></span>
+                    Open to opportunities
+                </div>
+
+                <span>
+                    Data · Analytics · BI
+                </span>
+
             </div>
 
         </nav>
@@ -522,561 +596,165 @@
     </header>
 
 
-    <!-- =========================
-         HERO
-    ========================== -->
+
+    <!-- ================= HERO ================= -->
 
     <main>
 
         <section class="hero">
 
-            <div class="container">
-
-                <div class="hero-grid">
-
-                    <div>
-
-                        <h1>
-                            Krishnapriya
-                        </h1>
-
-                        <div class="hero-stats">
-
-                            <div class="stat">
-                                <div class="stat-number">5+</div>
-                                <div class="stat-label">
-                                    Years in analytics
-                                </div>
-                            </div>
-
-                            <div class="stat">
-                                <div class="stat-number">SQL</div>
-                                <div class="stat-label">
-                                    Data & analytics
-                                </div>
-                            </div>
-
-                            <div class="stat">
-                                <div class="stat-number">BI</div>
-                                <div class="stat-label">
-                                    Reporting & insights
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
+            <div class="hero-content">
 
 
-                    <div>
+                <!-- SMALL INTRO -->
 
-                        <p class="hero-description">
+                <div class="eyebrow fade-up">
+                    <span class="eyebrow-line"></span>
 
-                            I build reliable data solutions that turn
-                            complex datasets into clear insights,
-                            dashboards and decisions.
+                    Data Analyst · UK
+
+                </div>
+
+
+
+                <!-- NAME -->
+
+                <h1 class="name fade-up delay-1">
+
+                    <span>
+                        Krishnapriya
+                    </span>
+
+                    <span class="last-name">
+                        Doraiswamy
+                    </span>
+
+                </h1>
+
+
+
+                <!-- LOWER CONTENT -->
+
+                <div class="hero-lower">
+
+
+                    <!-- LEFT -->
+
+                    <div class="fade-up delay-2">
+
+                        <p class="description">
+
+                            I turn complex data into
+                            <strong>clear insights,
+                            reliable reporting</strong>
+                            and better business decisions.
 
                         </p>
 
-                        <div class="hero-buttons">
 
-                            <a href="#work" class="button">
-                                View my work
+                        <!-- BUTTONS -->
+
+                        <div class="actions">
+
+                            <a
+                                href="CV.pdf"
+                                target="_blank"
+                                class="button"
+                            >
+
+                                <span>
+                                    View my CV
+                                </span>
+
+                                <span class="arrow">
+                                    ↗
+                                </span>
+
                             </a>
 
-                            <a href="CV.pdf"
-                               class="button"
-                               target="_blank">
-                                Résumé
+
+                            <a
+                                href="mailto:your.email@example.com"
+                                class="button"
+                            >
+
+                                <span>
+                                    Contact me
+                                </span>
+
+                                <span class="arrow">
+                                    ↗
+                                </span>
+
                             </a>
 
                         </div>
 
                     </div>
 
-                </div>
 
-            </div>
 
-        </section>
+                    <!-- RIGHT -->
 
+                    <div class="fade-up delay-3">
 
-        <!-- =========================
-             STATEMENT
-        ========================== -->
+                        <div class="hero-info">
 
-        <section>
 
-            <div class="container">
+                            <div class="info-item">
 
-                <div class="section-number">
-                    01 — What I do
-                </div>
-
-                <p class="statement">
-
-                    I work across data analysis, business
-                    intelligence and data services — connecting
-                    raw data to useful business outcomes.
-
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             PROJECTS
-        ========================== -->
-
-        <section id="work">
-
-            <div class="container">
-
-                <div class="section-number">
-                    02 — Selected work
-                </div>
-
-                <h2>
-                    Data projects
-                </h2>
-
-                <p class="projects-intro">
-
-                    A selection of work demonstrating SQL,
-                    Python, BI, data quality, transformation,
-                    reporting and analytics.
-
-                </p>
-
-
-                <div class="project-grid">
-
-
-                    <!-- PROJECT 1 -->
-
-                    <article class="project">
-
-                        <div>
-
-                            <div class="project-top">
-                                <span>01</span>
-                                <span>Data Services</span>
-                            </div>
-
-                            <h3>
-                                Maritime Data Quality
-                            </h3>
-
-                            <p>
-
-                                Analysed large maritime datasets
-                                containing vessel, AIS, ownership
-                                and movement information. Used SQL
-                                and Python to investigate discrepancies,
-                                validate transformations and improve
-                                data quality.
-
-                            </p>
-
-                        </div>
-
-                        <div class="tags">
-
-                            <span class="tag">SQL</span>
-                            <span class="tag">Python</span>
-                            <span class="tag">Snowflake</span>
-                            <span class="tag">Oracle</span>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- PROJECT 2 -->
-
-                    <article class="project">
-
-                        <div>
-
-                            <div class="project-top">
-                                <span>02</span>
-                                <span>Business Intelligence</span>
-                            </div>
-
-                            <h3>
-                                BI Reporting
-                            </h3>
-
-                            <p>
-
-                                Developed dashboards and reporting
-                                solutions to transform business data
-                                into actionable insights for
-                                stakeholders.
-
-                            </p>
-
-                        </div>
-
-                        <div class="tags">
-
-                            <span class="tag">Power BI</span>
-                            <span class="tag">Tableau</span>
-                            <span class="tag">SQL</span>
-                            <span class="tag">Excel</span>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- PROJECT 3 -->
-
-                    <article class="project">
-
-                        <div>
-
-                            <div class="project-top">
-                                <span>03</span>
-                                <span>Product Analytics</span>
-                            </div>
-
-                            <h3>
-                                Product Analytics
-                            </h3>
-
-                            <p>
-
-                                Analysed product and customer data
-                                using Python, SQL and BI tools to
-                                identify patterns, improve reporting
-                                and support product decisions.
-
-                            </p>
-
-                        </div>
-
-                        <div class="tags">
-
-                            <span class="tag">Python</span>
-                            <span class="tag">SQL</span>
-                            <span class="tag">Looker</span>
-                            <span class="tag">Tableau</span>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- PROJECT 4 -->
-
-                    <article class="project">
-
-                        <div>
-
-                            <div class="project-top">
-                                <span>04</span>
-                                <span>Data Automation</span>
-                            </div>
-
-                            <h3>
-                                Data Validation & Automation
-                            </h3>
-
-                            <p>
-
-                                Automated repetitive data validation
-                                and reconciliation processes,
-                                reducing manual effort and improving
-                                turnaround times.
-
-                            </p>
-
-                        </div>
-
-                        <div class="tags">
-
-                            <span class="tag">Python</span>
-                            <span class="tag">SQL</span>
-                            <span class="tag">ETL</span>
-                            <span class="tag">APIs</span>
-
-                        </div>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             EXPERIENCE
-        ========================== -->
-
-        <section id="experience">
-
-            <div class="container">
-
-                <div class="section-number">
-                    03 — Experience
-                </div>
-
-                <div class="experience">
-
-                    <div>
-
-                        <h2>
-                            From data<br>
-                            to decisions
-                        </h2>
-
-                    </div>
-
-
-                    <div class="experience-list">
-
-
-                        <div class="experience-item">
-
-                            <div class="experience-date">
-                                2025 — 2026
-                            </div>
-
-                            <div>
-
-                                <h3>
-                                    Data Services Analyst
-                                </h3>
-
-                                <div class="experience-company">
-                                    Lloyd's List Intelligence
-                                </div>
+                                <small>
+                                    Focus
+                                </small>
 
                                 <p>
-
-                                    Worked with large-scale maritime
-                                    datasets using SQL, Python,
-                                    Snowflake, Redshift and Oracle.
-                                    Focused on data validation,
-                                    reconciliation, transformation
-                                    and quality analysis.
-
+                                    Data Analytics<br>
+                                    Business Intelligence
                                 </p>
 
                             </div>
 
-                        </div>
 
+                            <div class="info-item">
 
-                        <div class="experience-item">
-
-                            <div class="experience-date">
-                                2023 — 2024
-                            </div>
-
-                            <div>
-
-                                <h3>
-                                    Product Analyst
-                                </h3>
-
-                                <div class="experience-company">
-                                    Responsive
-                                </div>
+                                <small>
+                                    Experience
+                                </small>
 
                                 <p>
-
-                                    Analysed product and customer
-                                    behaviour using SQL and Python,
-                                    created BI dashboards and worked
-                                    with cross-functional teams
-                                    through UAT and Agile delivery.
-
+                                    5+ years<br>
+                                    Analytics & Data
                                 </p>
 
                             </div>
 
-                        </div>
 
+                            <div class="info-item">
 
-                        <div class="experience-item">
-
-                            <div class="experience-date">
-                                Earlier
-                            </div>
-
-                            <div>
-
-                                <h3>
-                                    Market Research & Analytics
-                                </h3>
-
-                                <div class="experience-company">
-                                    Zinnov
-                                </div>
+                                <small>
+                                    Tools
+                                </small>
 
                                 <p>
-
-                                    Delivered technology and market
-                                    intelligence analysis using
-                                    structured research, data analysis
-                                    and visualisation.
-
+                                    SQL · Python<br>
+                                    Power BI · Tableau
                                 </p>
 
                             </div>
 
-                        </div>
 
-                    </div>
+                            <div class="info-item">
 
-                </div>
+                                <small>
+                                    Based
+                                </small>
 
-            </div>
+                                <p>
+                                    United Kingdom
+                                </p>
 
-        </section>
+                            </div>
 
-
-        <!-- =========================
-             SKILLS
-        ========================== -->
-
-        <section id="skills">
-
-            <div class="container">
-
-                <div class="section-number">
-                    04 — Skills & tooling
-                </div>
-
-                <h2>
-                    The stack<br>
-                    I work with
-                </h2>
-
-
-                <div class="skills-grid">
-
-
-                    <div class="skill-box">
-
-                        <h3>
-                            Data & SQL
-                        </h3>
-
-                        <div class="skill-list">
-
-                            <span class="skill">SQL</span>
-                            <span class="skill">T-SQL</span>
-                            <span class="skill">CTEs</span>
-                            <span class="skill">Window Functions</span>
-                            <span class="skill">ETL</span>
-                            <span class="skill">Data Quality</span>
-                            <span class="skill">Data Validation</span>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="skill-box">
-
-                        <h3>
-                            BI & Analytics
-                        </h3>
-
-                        <div class="skill-list">
-
-                            <span class="skill">Power BI</span>
-                            <span class="skill">Tableau</span>
-                            <span class="skill">Looker</span>
-                            <span class="skill">Excel</span>
-                            <span class="skill">Dashboards</span>
-                            <span class="skill">Reporting</span>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="skill-box">
-
-                        <h3>
-                            Python & Data
-                        </h3>
-
-                        <div class="skill-list">
-
-                            <span class="skill">Python</span>
-                            <span class="skill">Pandas</span>
-                            <span class="skill">NumPy</span>
-                            <span class="skill">Matplotlib</span>
-                            <span class="skill">APIs</span>
-                            <span class="skill">Automation</span>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="skill-box">
-
-                        <h3>
-                            Data Platforms
-                        </h3>
-
-                        <div class="skill-list">
-
-                            <span class="skill">Snowflake</span>
-                            <span class="skill">Redshift</span>
-                            <span class="skill">Oracle</span>
-                            <span class="skill">PostgreSQL</span>
-                            <span class="skill">MySQL</span>
-                            <span class="skill">MongoDB</span>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="skill-box">
-
-                        <h3>
-                            Cloud & Engineering
-                        </h3>
-
-                        <div class="skill-list">
-
-                            <span class="skill">AWS</span>
-                            <span class="skill">S3</span>
-                            <span class="skill">EMR</span>
-                            <span class="skill">Git</span>
-                            <span class="skill">Jira</span>
-                            <span class="skill">Confluence</span>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="skill-box">
-
-                        <h3>
-                            Delivery
-                        </h3>
-
-                        <div class="skill-list">
-
-                            <span class="skill">Agile</span>
-                            <span class="skill">UAT</span>
-                            <span class="skill">Stakeholder Management</span>
-                            <span class="skill">Requirements</span>
-                            <span class="skill">Data Mapping</span>
 
                         </div>
 
@@ -1086,123 +764,33 @@
 
             </div>
 
-        </section>
 
 
-        <!-- =========================
-             ABOUT
-        ========================== -->
+            <!-- DECORATIVE NUMBER -->
 
-        <section id="about">
-
-            <div class="container">
-
-                <div class="section-number">
-                    05 — About me
-                </div>
-
-                <div class="about-grid">
-
-                    <div>
-
-                        <p class="about-text">
-
-                            I'm a data analyst with experience
-                            across business intelligence, product
-                            analytics and data services.
-
-                        </p>
-
-                    </div>
-
-                    <div class="about-details">
-
-                        <p>
-
-                            My work sits between business questions
-                            and technical data. I enjoy understanding
-                            where data comes from, validating it,
-                            transforming it and presenting it in a
-                            way that people can actually use.
-
-                        </p>
-
-                        <p>
-
-                            I'm particularly interested in analytics,
-                            BI, modern data platforms and the growing
-                            role of AI in data workflows.
-
-                        </p>
-
-                        <p>
-
-                            Based in the UK and open to opportunities
-                            across data analytics, BI and analytics
-                            engineering.
-
-                        </p>
-
-                    </div>
-
-                </div>
-
+            <div class="number">
+                01 / INTRODUCTION
             </div>
 
-        </section>
 
 
-        <!-- =========================
-             CONTACT
-        ========================== -->
+            <!-- BOTTOM -->
 
-        <section id="contact" class="contact">
+            <div class="bottom-bar">
 
-            <div class="container">
+                <span>
+                    Scroll to explore
+                </span>
 
-                <div class="section-number">
-                    06 — Get in touch
-                </div>
-
-                <h2>
-                    Let's talk about<br>
-                    data.
-                </h2>
-
-                <a
-                    href="mailto:your.email@example.com"
-                    class="email">
-
-                    your.email@example.com
-
-                </a>
+                <span>
+                    2026
+                </span>
 
             </div>
 
         </section>
 
     </main>
-
-
-    <!-- =========================
-         FOOTER
-    ========================== -->
-
-    <footer>
-
-        <div class="footer-inner">
-
-            <span>
-                © 2026 Krishnapriya Doraiswamy
-            </span>
-
-            <span>
-                Hand-built with HTML & CSS · GitHub Pages
-            </span>
-
-        </div>
-
-    </footer>
 
 </div>
 
