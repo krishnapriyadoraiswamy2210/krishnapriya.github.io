@@ -7,9 +7,13 @@
     <title>Krishnapriya Doraiswamy | Data Analyst</title>
 
     <meta name="description"
-          content="Krishnapriya Doraiswamy - Data Analyst specialising in SQL, Python, Power BI, data analytics and business intelligence.">
+          content="Krishnapriya Doraiswamy - Data Analyst specialising in SQL, Python, Power BI, Tableau, Snowflake and data analytics.">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -21,8 +25,8 @@
         }
 
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f7f8fc;
+            font-family: Inter, Arial, sans-serif;
+            background: #f8fafc;
             color: #172033;
             line-height: 1.6;
         }
@@ -32,19 +36,21 @@
             color: inherit;
         }
 
-        /* NAVIGATION */
+        /* =========================
+           NAVIGATION
+        ========================= */
 
         nav {
-            position: fixed;
+            position: sticky;
             top: 0;
-            width: 100%;
             z-index: 1000;
-            background: rgba(255, 255, 255, 0.95);
-            border-bottom: 1px solid #e7e9ef;
+            background: rgba(255,255,255,0.94);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #e5e7eb;
         }
 
         .nav-container {
-            max-width: 1100px;
+            max-width: 1150px;
             margin: auto;
             padding: 18px 25px;
             display: flex;
@@ -53,237 +59,391 @@
         }
 
         .logo {
-            font-size: 20px;
+            font-size: 21px;
             font-weight: 700;
-            color: #111827;
+        }
+
+        .logo span {
+            color: #2563eb;
         }
 
         .nav-links {
             display: flex;
-            gap: 28px;
+            gap: 30px;
             list-style: none;
-        }
-
-        .nav-links a {
             font-size: 14px;
-            color: #4b5563;
-            transition: 0.2s;
+            color: #475569;
         }
 
         .nav-links a:hover {
-            color: #4f46e5;
+            color: #2563eb;
         }
 
-        /* HERO */
+        /* =========================
+           GENERAL
+        ========================= */
 
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            padding: 120px 25px 80px;
-        }
-
-        .hero-container {
-            max-width: 1100px;
-            width: 100%;
+        .container {
+            max-width: 1150px;
             margin: auto;
-            display: grid;
-            grid-template-columns: 1.4fr 0.6fr;
-            gap: 60px;
-            align-items: center;
+            padding: 0 25px;
         }
-
-        .eyebrow {
-            color: #4f46e5;
-            font-weight: 700;
-            font-size: 15px;
-            margin-bottom: 15px;
-            letter-spacing: 0.5px;
-        }
-
-        h1 {
-            font-size: clamp(45px, 7vw, 76px);
-            line-height: 1.05;
-            letter-spacing: -3px;
-            margin-bottom: 25px;
-            color: #111827;
-        }
-
-        .hero h1 span {
-            color: #4f46e5;
-        }
-
-        .hero-description {
-            font-size: 19px;
-            max-width: 650px;
-            color: #5b6474;
-            margin-bottom: 35px;
-        }
-
-        .buttons {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .button {
-            padding: 13px 23px;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 14px;
-            border: 1px solid #d9dce5;
-            transition: 0.2s;
-        }
-
-        .button-primary {
-            background: #4f46e5;
-            color: white;
-            border-color: #4f46e5;
-        }
-
-        .button-primary:hover {
-            background: #4338ca;
-        }
-
-        .button-secondary {
-            background: white;
-        }
-
-        .button-secondary:hover {
-            border-color: #4f46e5;
-            color: #4f46e5;
-        }
-
-        /* HERO CARD */
-
-        .profile-card {
-            background: white;
-            border: 1px solid #e5e7eb;
-            border-radius: 20px;
-            padding: 35px;
-            box-shadow: 0 15px 40px rgba(20, 30, 60, 0.08);
-        }
-
-        .profile-icon {
-            width: 90px;
-            height: 90px;
-            border-radius: 50%;
-            background: #eef2ff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 35px;
-            font-weight: 700;
-            color: #4f46e5;
-            margin-bottom: 25px;
-        }
-
-        .profile-card h3 {
-            margin-bottom: 8px;
-        }
-
-        .profile-card p {
-            color: #697386;
-            font-size: 14px;
-        }
-
-        .stat {
-            margin-top: 25px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-        }
-
-        .stat strong {
-            display: block;
-            font-size: 25px;
-            color: #111827;
-        }
-
-        .stat span {
-            font-size: 13px;
-            color: #697386;
-        }
-
-        /* SECTIONS */
 
         section {
-            padding: 100px 25px;
-        }
-
-        .section-container {
-            max-width: 1100px;
-            margin: auto;
+            padding: 90px 0;
         }
 
         .section-label {
-            color: #4f46e5;
-            font-weight: 700;
+            color: #2563eb;
             font-size: 13px;
+            font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
             margin-bottom: 10px;
         }
 
         .section-title {
-            font-size: 38px;
-            margin-bottom: 45px;
-            letter-spacing: -1px;
+            font-size: 34px;
+            margin-bottom: 15px;
         }
 
-        /* ABOUT */
+        .section-description {
+            color: #64748b;
+            max-width: 700px;
+            margin-bottom: 40px;
+        }
 
-        .about {
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            background: white;
+            padding: 100px 0 80px;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.25fr 0.75fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background: #eff6ff;
+            color: #2563eb;
+            padding: 7px 14px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            line-height: 1.08;
+            letter-spacing: -2px;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 span {
+            color: #2563eb;
+        }
+
+        .hero-text {
+            font-size: 18px;
+            color: #64748b;
+            max-width: 680px;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: 0.2s;
+        }
+
+        .btn-primary {
+            background: #2563eb;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #1d4ed8;
+        }
+
+        .btn-secondary {
+            border: 1px solid #d1d5db;
             background: white;
         }
+
+        .btn-secondary:hover {
+            border-color: #2563eb;
+            color: #2563eb;
+        }
+
+        /* =========================
+           HERO CARD
+        ========================= */
+
+        .hero-card {
+            background: #0f172a;
+            border-radius: 20px;
+            padding: 30px;
+            color: white;
+            box-shadow: 0 20px 50px rgba(15,23,42,0.15);
+        }
+
+        .hero-card-title {
+            font-size: 14px;
+            color: #94a3b8;
+            margin-bottom: 20px;
+        }
+
+        .data-flow {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .flow-item {
+            background: #1e293b;
+            border-radius: 10px;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .flow-icon {
+            width: 35px;
+            height: 35px;
+            border-radius: 8px;
+            background: #2563eb;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .flow-arrow {
+            text-align: center;
+            color: #64748b;
+        }
+
+        /* =========================
+           STATS
+        ========================= */
+
+        .stats {
+            background: #f1f5f9;
+            padding: 25px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .stat {
+            text-align: center;
+            padding: 15px;
+        }
+
+        .stat h3 {
+            font-size: 28px;
+            color: #2563eb;
+        }
+
+        .stat p {
+            color: #64748b;
+            font-size: 13px;
+        }
+
+        /* =========================
+           ABOUT
+        ========================= */
 
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 60px;
-        }
-
-        .about-text {
-            color: #596273;
-            font-size: 16px;
+            align-items: center;
         }
 
         .about-text p {
             margin-bottom: 18px;
+            color: #64748b;
         }
 
-        .highlights {
+        .about-box {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 16px;
+            padding: 30px;
+        }
+
+        .about-box h3 {
+            margin-bottom: 20px;
+        }
+
+        .about-list {
+            list-style: none;
+        }
+
+        .about-list li {
+            margin-bottom: 15px;
+            color: #64748b;
+        }
+
+        .about-list i {
+            color: #2563eb;
+            margin-right: 10px;
+        }
+
+        /* =========================
+           WORKFLOW
+        ========================= */
+
+        .workflow {
+            background: white;
+        }
+
+        .workflow-grid {
             display: grid;
-            gap: 15px;
-        }
-
-        .highlight {
-            background: #f7f8fc;
-            border: 1px solid #e8eaf0;
-            border-radius: 12px;
-            padding: 20px;
-        }
-
-        .highlight strong {
-            display: block;
-            margin-bottom: 5px;
-            color: #111827;
-        }
-
-        .highlight span {
-            color: #697386;
-            font-size: 14px;
-        }
-
-        /* SKILLS */
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(4,1fr);
             gap: 20px;
         }
 
-        .skill-card {
+        .workflow-card {
+            border: 1px solid #e5e7eb;
+            border-radius: 14px;
+            padding: 25px;
+            background: #fff;
+        }
+
+        .workflow-number {
+            color: #2563eb;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .workflow-card h3 {
+            margin: 12px 0;
+            font-size: 18px;
+        }
+
+        .workflow-card p {
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        /* =========================
+           PROJECTS
+        ========================= */
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 25px;
+        }
+
+        .project {
             background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: 0.25s;
+        }
+
+        .project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(15,23,42,0.08);
+        }
+
+        .project-image {
+            height: 190px;
+            background: linear-gradient(135deg,#dbeafe,#eff6ff);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2563eb;
+            font-size: 50px;
+        }
+
+        .project-content {
+            padding: 25px;
+        }
+
+        .project-tag {
+            display: inline-block;
+            font-size: 11px;
+            background: #eff6ff;
+            color: #2563eb;
+            padding: 5px 9px;
+            border-radius: 20px;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .project h3 {
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+        .project p {
+            color: #64748b;
+            font-size: 14px;
+            margin-bottom: 18px;
+        }
+
+        .tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            margin-bottom: 20px;
+        }
+
+        .tech span {
+            background: #f1f5f9;
+            padding: 5px 9px;
+            border-radius: 5px;
+            font-size: 11px;
+            color: #475569;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 15px;
+            color: #2563eb;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        /* =========================
+           SKILLS
+        ========================= */
+
+        .skills {
+            background: white;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 25px;
+        }
+
+        .skill-card {
             border: 1px solid #e5e7eb;
             border-radius: 14px;
             padding: 25px;
@@ -295,163 +455,72 @@
         }
 
         .skill-card p {
-            color: #697386;
+            color: #64748b;
             font-size: 14px;
         }
 
-        /* EXPERIENCE */
+        /* =========================
+           CONTACT
+        ========================= */
 
-        .experience {
-            background: white;
+        .contact {
+            background: #0f172a;
+            color: white;
+            text-align: center;
         }
 
-        .timeline {
-            border-left: 2px solid #e4e6ed;
-            padding-left: 30px;
+        .contact .section-label {
+            color: #60a5fa;
         }
 
-        .job {
-            position: relative;
-            margin-bottom: 45px;
-        }
-
-        .job::before {
-            content: "";
-            position: absolute;
-            left: -38px;
-            top: 5px;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: #4f46e5;
-        }
-
-        .job-date {
-            color: #4f46e5;
-            font-size: 13px;
-            font-weight: 700;
-            margin-bottom: 6px;
-        }
-
-        .job h3 {
-            font-size: 21px;
-            margin-bottom: 3px;
-        }
-
-        .job-company {
-            color: #697386;
-            margin-bottom: 12px;
-        }
-
-        .job p {
-            color: #596273;
-            font-size: 15px;
-            max-width: 800px;
-        }
-
-        /* PROJECTS */
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
-        }
-
-        .project {
-            background: white;
-            border: 1px solid #e5e7eb;
-            border-radius: 15px;
-            padding: 30px;
-            transition: 0.2s;
-        }
-
-        .project:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 15px 35px rgba(20, 30, 60, 0.08);
-        }
-
-        .project-number {
-            color: #4f46e5;
-            font-weight: 700;
+        .contact h2 {
+            font-size: 38px;
             margin-bottom: 15px;
         }
 
-        .project h3 {
-            margin-bottom: 10px;
-            font-size: 21px;
-        }
-
-        .project p {
-            color: #697386;
-            font-size: 14px;
-            margin-bottom: 18px;
-        }
-
-        .tags {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-        }
-
-        .tag {
-            background: #eef2ff;
-            color: #4338ca;
-            padding: 5px 10px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 600;
-        }
-
-        /* EDUCATION */
-
-        .education {
-            background: white;
-        }
-
-        .education-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 25px;
-        }
-
-        .education-card {
-            border: 1px solid #e5e7eb;
-            border-radius: 14px;
-            padding: 25px;
-        }
-
-        .education-card h3 {
-            margin-bottom: 8px;
-        }
-
-        .education-card p {
-            color: #697386;
-            font-size: 14px;
-        }
-
-        /* CONTACT */
-
-        .contact {
-            text-align: center;
-        }
-
-        .contact-text {
+        .contact p {
+            color: #94a3b8;
             max-width: 600px;
             margin: 0 auto 30px;
-            color: #697386;
         }
 
-        /* FOOTER */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-links a {
+            width: 45px;
+            height: 45px;
+            border: 1px solid #334155;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.2s;
+        }
+
+        .social-links a:hover {
+            background: #2563eb;
+            border-color: #2563eb;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
 
         footer {
-            background: #111827;
-            color: #9ca3af;
+            background: #020617;
+            color: #64748b;
             text-align: center;
-            padding: 30px 20px;
-            font-size: 13px;
+            padding: 20px;
+            font-size: 12px;
         }
 
-        /* MOBILE */
+        /* =========================
+           MOBILE
+        ========================= */
 
         @media (max-width: 800px) {
 
@@ -459,131 +528,248 @@
                 display: none;
             }
 
-            .hero-container,
-            .about-grid,
-            .education-grid {
+            .hero-grid,
+            .about-grid {
                 grid-template-columns: 1fr;
             }
 
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .workflow-grid,
             .skills-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr 1fr;
             }
 
             .projects-grid {
                 grid-template-columns: 1fr;
             }
+        }
 
-            h1 {
-                letter-spacing: -2px;
+        @media (max-width: 550px) {
+
+            section {
+                padding: 65px 0;
             }
 
-            .profile-card {
-                max-width: 400px;
+            .workflow-grid,
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
             }
         }
+
     </style>
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
+
+<!-- =========================
+     NAVIGATION
+========================= -->
 
 <nav>
     <div class="nav-container">
-        <div class="logo">KD.</div>
+
+        <div class="logo">
+            Krishnapriya<span>.</span>
+        </div>
 
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#experience">Experience</a></li>
+            <li><a href="#approach">Approach</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+
     </div>
 </nav>
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
-<header class="hero">
+<section class="hero">
 
-    <div class="hero-container">
+    <div class="container">
 
-        <div>
+        <div class="hero-grid">
 
-            <div class="eyebrow">
-                DATA ANALYST · BI · ANALYTICS
+            <div>
+
+                <div class="hero-tag">
+                    Data Analyst • BI • Analytics
+                </div>
+
+                <h1>
+                    Turning data into
+                    <span>clear business decisions.</span>
+                </h1>
+
+                <p class="hero-text">
+                    I'm Krishnapriya, a Data Analyst with 5+ years of
+                    experience working across analytics, business intelligence,
+                    data services and product analytics.
+                </p>
+
+                <div class="buttons">
+
+                    <a href="#projects"
+                       class="btn btn-primary">
+                        View My Projects
+                    </a>
+
+                    <a href="Krishnapriya_Doraiswamy_CV.pdf"
+                       class="btn btn-secondary">
+                        Download CV
+                    </a>
+
+                    <a href="https://github.com/krishnapriyadoraiswamy2210"
+                       target="_blank"
+                       class="btn btn-secondary">
+                        GitHub
+                    </a>
+
+                </div>
+
             </div>
 
-            <h1>
-                Hi, I'm<br>
-                <span>Krishnapriya.</span>
-            </h1>
 
-            <p class="hero-description">
-                I turn complex data into clear insights, reliable reporting
-                and business-ready solutions using SQL, Python and modern BI
-                technologies.
-            </p>
+            <!-- DATA FLOW CARD -->
 
-            <div class="buttons">
+            <div class="hero-card">
 
-                <a href="#projects" class="button button-primary">
-                    View My Work
-                </a>
+                <div class="hero-card-title">
+                    MY ANALYTICS WORKFLOW
+                </div>
 
-                <a href="#contact" class="button button-secondary">
-                    Get In Touch
-                </a>
+                <div class="data-flow">
 
-            </div>
+                    <div class="flow-item">
+                        <div class="flow-icon">
+                            <i class="fa-solid fa-database"></i>
+                        </div>
+                        <div>
+                            Data Sources
+                        </div>
+                    </div>
 
-        </div>
+                    <div class="flow-arrow">
+                        ↓
+                    </div>
 
+                    <div class="flow-item">
+                        <div class="flow-icon">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <div>
+                            SQL & Python
+                        </div>
+                    </div>
 
-        <div class="profile-card">
+                    <div class="flow-arrow">
+                        ↓
+                    </div>
 
-            <div class="profile-icon">
-                KD
-            </div>
+                    <div class="flow-item">
+                        <div class="flow-icon">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <div>
+                            BI & Dashboards
+                        </div>
+                    </div>
 
-            <h3>
-                Data Analyst
-            </h3>
+                    <div class="flow-arrow">
+                        ↓
+                    </div>
 
-            <p>
-                Business Intelligence · Data Products · Analytics
-            </p>
+                    <div class="flow-item">
+                        <div class="flow-icon">
+                            <i class="fa-solid fa-lightbulb"></i>
+                        </div>
+                        <div>
+                            Business Insights
+                        </div>
+                    </div>
 
-            <div class="stat">
-                <strong>5+</strong>
-                <span>Years of analytics experience</span>
-            </div>
+                </div>
 
-            <div class="stat">
-                <strong>SQL</strong>
-                <span>Data transformation & analysis</span>
             </div>
 
         </div>
 
     </div>
 
-</header>
+</section>
 
 
-<!-- ABOUT -->
+<!-- =========================
+     STATS
+========================= -->
 
-<section id="about" class="about">
+<div class="stats">
 
-    <div class="section-container">
+    <div class="container">
+
+        <div class="stats-grid">
+
+            <div class="stat">
+                <h3>5+</h3>
+                <p>Years Analytics Experience</p>
+            </div>
+
+            <div class="stat">
+                <h3>100K+</h3>
+                <p>Records Analysed</p>
+            </div>
+
+            <div class="stat">
+                <h3>40+</h3>
+                <p>Dashboards & Reports</p>
+            </div>
+
+            <div class="stat">
+                <h3>SQL</h3>
+                <p>Core Analytics Skill</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section id="about">
+
+    <div class="container">
 
         <div class="section-label">
             About Me
         </div>
 
         <h2 class="section-title">
-            Turning data into decisions.
+            Data analyst with a business-first mindset.
         </h2>
 
         <div class="about-grid">
@@ -591,54 +777,388 @@
             <div class="about-text">
 
                 <p>
-                    I'm a data and analytics professional with 5+ years of
-                    experience working across data analysis, business
-                    intelligence, market research and data services.
+                    I specialise in turning complex datasets into
+                    reliable analysis, dashboards and actionable insights.
                 </p>
 
                 <p>
-                    My work sits between business problems and technical
-                    solutions — from extracting and transforming data with
-                    SQL and Python to building dashboards and validating
-                    data quality.
+                    My experience spans data services, product analytics,
+                    market research and business intelligence, giving me
+                    both technical and business perspectives.
                 </p>
 
                 <p>
-                    I enjoy understanding how data moves through a business
-                    and turning that data into something useful, reliable
-                    and easy to understand.
+                    I enjoy working across the full analytics lifecycle —
+                    understanding the question, preparing the data,
+                    validating results and communicating the answer clearly.
                 </p>
 
             </div>
 
-            <div class="highlights">
+            <div class="about-box">
 
-                <div class="highlight">
-                    <strong>Data Analytics</strong>
-                    <span>
-                        SQL, Python, data cleaning, transformation and analysis
-                    </span>
+                <h3>What I bring</h3>
+
+                <ul class="about-list">
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Advanced SQL & data analysis
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Python & data manipulation
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Power BI, Tableau & Looker
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Data quality & validation
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Stakeholder & business collaboration
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     APPROACH
+========================= -->
+
+<section id="approach" class="workflow">
+
+    <div class="container">
+
+        <div class="section-label">
+            How I Work
+        </div>
+
+        <h2 class="section-title">
+            From business question to insight.
+        </h2>
+
+        <p class="section-description">
+            My approach combines technical analysis with a focus on
+            business context and data quality.
+        </p>
+
+
+        <div class="workflow-grid">
+
+            <div class="workflow-card">
+
+                <div class="workflow-number">
+                    01
                 </div>
 
-                <div class="highlight">
-                    <strong>Business Intelligence</strong>
-                    <span>
-                        Power BI, Tableau, Looker and data visualisation
-                    </span>
+                <h3>
+                    Understand
+                </h3>
+
+                <p>
+                    Define the business problem, requirements,
+                    KPIs and decisions the analysis needs to support.
+                </p>
+
+            </div>
+
+
+            <div class="workflow-card">
+
+                <div class="workflow-number">
+                    02
                 </div>
 
-                <div class="highlight">
-                    <strong>Data Quality</strong>
-                    <span>
-                        Validation, reconciliation, ETL and source-to-target mapping
-                    </span>
+                <h3>
+                    Prepare
+                </h3>
+
+                <p>
+                    Extract, clean, join and validate data from
+                    multiple sources.
+                </p>
+
+            </div>
+
+
+            <div class="workflow-card">
+
+                <div class="workflow-number">
+                    03
                 </div>
 
-                <div class="highlight">
-                    <strong>Stakeholder Collaboration</strong>
-                    <span>
-                        Translating business requirements into analytical solutions
+                <h3>
+                    Analyse
+                </h3>
+
+                <p>
+                    Use SQL, Python and analytical techniques to
+                    identify trends, issues and opportunities.
+                </p>
+
+            </div>
+
+
+            <div class="workflow-card">
+
+                <div class="workflow-number">
+                    04
+                </div>
+
+                <h3>
+                    Communicate
+                </h3>
+
+                <p>
+                    Turn findings into dashboards, reports and
+                    clear recommendations for stakeholders.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PROJECTS
+========================= -->
+
+<section id="projects">
+
+    <div class="container">
+
+        <div class="section-label">
+            Selected Work
+        </div>
+
+        <h2 class="section-title">
+            Featured Projects
+        </h2>
+
+        <p class="section-description">
+            A selection of analytics projects demonstrating SQL,
+            Python, BI, data quality and business analysis.
+        </p>
+
+
+        <div class="projects-grid">
+
+
+            <!-- PROJECT 1 -->
+
+            <div class="project">
+
+                <div class="project-image">
+                    <i class="fa-solid fa-chart-column"></i>
+                </div>
+
+                <div class="project-content">
+
+                    <span class="project-tag">
+                        BUSINESS INTELLIGENCE
                     </span>
+
+                    <h3>
+                        Sales & Performance Dashboard
+                    </h3>
+
+                    <p>
+                        Interactive dashboard designed to analyse
+                        business performance, trends, KPIs and
+                        operational metrics.
+                    </p>
+
+                    <div class="tech">
+
+                        <span>Power BI</span>
+                        <span>SQL</span>
+                        <span>Excel</span>
+                        <span>DAX</span>
+
+                    </div>
+
+                    <div class="project-links">
+
+                        <a href="#">
+                            View Project →
+                        </a>
+
+                        <a href="#">
+                            GitHub →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROJECT 2 -->
+
+            <div class="project">
+
+                <div class="project-image">
+                    <i class="fa-solid fa-database"></i>
+                </div>
+
+                <div class="project-content">
+
+                    <span class="project-tag">
+                        DATA ANALYTICS
+                    </span>
+
+                    <h3>
+                        Data Quality & Reconciliation Analysis
+                    </h3>
+
+                    <p>
+                        SQL-based analysis for identifying data
+                        discrepancies, validating records and
+                        improving reporting reliability.
+                    </p>
+
+                    <div class="tech">
+
+                        <span>SQL</span>
+                        <span>Snowflake</span>
+                        <span>Oracle</span>
+                        <span>Python</span>
+
+                    </div>
+
+                    <div class="project-links">
+
+                        <a href="#">
+                            Case Study →
+                        </a>
+
+                        <a href="#">
+                            GitHub →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROJECT 3 -->
+
+            <div class="project">
+
+                <div class="project-image">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+
+                <div class="project-content">
+
+                    <span class="project-tag">
+                        PRODUCT ANALYTICS
+                    </span>
+
+                    <h3>
+                        Product Usage & Customer Analytics
+                    </h3>
+
+                    <p>
+                        Analysis of product usage patterns,
+                        customer behaviour and performance metrics
+                        to support product decisions.
+                    </p>
+
+                    <div class="tech">
+
+                        <span>Python</span>
+                        <span>SQL</span>
+                        <span>Tableau</span>
+                        <span>Looker</span>
+
+                    </div>
+
+                    <div class="project-links">
+
+                        <a href="#">
+                            View Project →
+                        </a>
+
+                        <a href="#">
+                            GitHub →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROJECT 4 -->
+
+            <div class="project">
+
+                <div class="project-image">
+                    <i class="fa-solid fa-gears"></i>
+                </div>
+
+                <div class="project-content">
+
+                    <span class="project-tag">
+                        DATA AUTOMATION
+                    </span>
+
+                    <h3>
+                        Analytics Workflow Automation
+                    </h3>
+
+                    <p>
+                        Automated repetitive data preparation and
+                        validation tasks to reduce manual effort and
+                        improve turnaround time.
+                    </p>
+
+                    <div class="tech">
+
+                        <span>Python</span>
+                        <span>Pandas</span>
+                        <span>SQL</span>
+                        <span>APIs</span>
+
+                    </div>
+
+                    <div class="project-links">
+
+                        <a href="#">
+                            View Project →
+                        </a>
+
+                        <a href="#">
+                            GitHub →
+                        </a>
+
+                    </div>
+
                 </div>
 
             </div>
@@ -650,156 +1170,109 @@
 </section>
 
 
-<!-- SKILLS -->
+<!-- =========================
+     SKILLS
+========================= -->
 
-<section id="skills">
+<section id="skills" class="skills">
 
-    <div class="section-container">
+    <div class="container">
 
         <div class="section-label">
             Technical Skills
         </div>
 
         <h2 class="section-title">
-            Tools I work with.
+            Tools I work with
         </h2>
 
         <div class="skills-grid">
 
-            <div class="skill-card">
-                <h3>Data & SQL</h3>
-                <p>
-                    SQL · T-SQL · CTEs · Window Functions · Query Optimisation
-                    · ETL · Data Validation · Data Quality
-                </p>
-            </div>
 
             <div class="skill-card">
-                <h3>Programming</h3>
-                <p>
-                    Python · Pandas · NumPy · Matplotlib · API Integration
-                </p>
-            </div>
-
-            <div class="skill-card">
-                <h3>Business Intelligence</h3>
-                <p>
-                    Power BI · Tableau · Looker · Excel · Data Visualisation
-                </p>
-            </div>
-
-            <div class="skill-card">
-                <h3>Databases</h3>
-                <p>
-                    Snowflake · Redshift · Oracle · PostgreSQL · MySQL · MongoDB
-                </p>
-            </div>
-
-            <div class="skill-card">
-                <h3>Cloud & Data</h3>
-                <p>
-                    AWS · S3 · EMR · Data Warehousing · Data Pipelines
-                </p>
-            </div>
-
-            <div class="skill-card">
-                <h3>Ways of Working</h3>
-                <p>
-                    Agile · Scrum · Kanban · Jira · Confluence · Git · UAT
-                </p>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- EXPERIENCE -->
-
-<section id="experience" class="experience">
-
-    <div class="section-container">
-
-        <div class="section-label">
-            Experience
-        </div>
-
-        <h2 class="section-title">
-            Where I've worked.
-        </h2>
-
-        <div class="timeline">
-
-            <div class="job">
-
-                <div class="job-date">
-                    MAR 2025 — MAR 2026
-                </div>
 
                 <h3>
-                    Data Services Analyst
+                    Analytics
                 </h3>
 
-                <div class="job-company">
-                    Lloyd's List Intelligence
-                </div>
-
                 <p>
-                    Worked with large maritime datasets, supporting data
-                    transformation, validation, reconciliation and source-to-
-                    target mapping across Oracle, Snowflake and Redshift.
-                    Used SQL, Python and APIs to investigate data issues and
-                    improve operational workflows.
+                    SQL, data analysis, KPI design,
+                    data validation, data quality,
+                    exploratory analysis and reporting.
                 </p>
 
             </div>
 
 
-            <div class="job">
-
-                <div class="job-date">
-                    JUN 2023 — OCT 2024
-                </div>
+            <div class="skill-card">
 
                 <h3>
-                    Product Analyst
+                    BI & Visualisation
                 </h3>
 
-                <div class="job-company">
-                    Responsive
-                </div>
-
                 <p>
-                    Analysed product and customer data using Python, SQL and
-                    BI tools. Built dashboards, supported data warehouse
-                    initiatives, worked with APIs and collaborated with
-                    product and engineering teams through UAT and Agile
-                    delivery.
+                    Power BI, Tableau, Looker,
+                    Excel, dashboard design,
+                    KPI reporting and data storytelling.
                 </p>
 
             </div>
 
 
-            <div class="job">
-
-                <div class="job-date">
-                    EARLIER EXPERIENCE
-                </div>
+            <div class="skill-card">
 
                 <h3>
-                    Market Research & Analytics
+                    Programming
                 </h3>
 
-                <div class="job-company">
-                    Zinnov
-                </div>
+                <p>
+                    Python, Pandas, NumPy,
+                    Matplotlib, API integration
+                    and automation.
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <h3>
+                    Databases
+                </h3>
 
                 <p>
-                    Conducted technology and market research, analysed
-                    datasets and translated research findings into structured
-                    business insights and client-facing deliverables.
+                    Snowflake, Redshift, Oracle,
+                    PostgreSQL, MySQL and MongoDB.
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <h3>
+                    Cloud & Data
+                </h3>
+
+                <p>
+                    AWS S3, AWS EMR,
+                    ETL/ELT concepts,
+                    data pipelines and warehousing.
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <h3>
+                    Collaboration
+                </h3>
+
+                <p>
+                    Agile, Scrum, Jira, Confluence,
+                    Git, UAT, stakeholder communication
+                    and requirements analysis.
                 </p>
 
             </div>
@@ -811,215 +1284,54 @@
 </section>
 
 
-<!-- PROJECTS -->
-
-<section id="projects">
-
-    <div class="section-container">
-
-        <div class="section-label">
-            Featured Work
-        </div>
-
-        <h2 class="section-title">
-            Projects & case studies.
-        </h2>
-
-        <div class="projects-grid">
-
-            <div class="project">
-
-                <div class="project-number">
-                    01
-                </div>
-
-                <h3>
-                    Data Quality & Reconciliation
-                </h3>
-
-                <p>
-                    Designed SQL-based validation and reconciliation logic
-                    to investigate discrepancies across large operational
-                    datasets and improve data reliability.
-                </p>
-
-                <div class="tags">
-                    <span class="tag">SQL</span>
-                    <span class="tag">Snowflake</span>
-                    <span class="tag">Data Quality</span>
-                    <span class="tag">ETL</span>
-                </div>
-
-            </div>
-
-
-            <div class="project">
-
-                <div class="project-number">
-                    02
-                </div>
-
-                <h3>
-                    Business Intelligence Dashboard
-                </h3>
-
-                <p>
-                    Created interactive BI dashboards to transform raw
-                    business data into accessible performance insights
-                    for stakeholders.
-                </p>
-
-                <div class="tags">
-                    <span class="tag">Power BI</span>
-                    <span class="tag">SQL</span>
-                    <span class="tag">Data Visualisation</span>
-                </div>
-
-            </div>
-
-
-            <div class="project">
-
-                <div class="project-number">
-                    03
-                </div>
-
-                <h3>
-                    Customer & Product Analytics
-                </h3>
-
-                <p>
-                    Analysed customer and product behaviour using Python,
-                    segmentation and BI reporting to support product
-                    decision-making.
-                </p>
-
-                <div class="tags">
-                    <span class="tag">Python</span>
-                    <span class="tag">Pandas</span>
-                    <span class="tag">Tableau</span>
-                    <span class="tag">Looker</span>
-                </div>
-
-            </div>
-
-
-            <div class="project">
-
-                <div class="project-number">
-                    04
-                </div>
-
-                <h3>
-                    SQL Analytics Case Study
-                </h3>
-
-                <p>
-                    A collection of practical SQL analysis covering joins,
-                    aggregations, CTEs, window functions, ranking and
-                    business-focused problem solving.
-                </p>
-
-                <div class="tags">
-                    <span class="tag">SQL</span>
-                    <span class="tag">CTEs</span>
-                    <span class="tag">Window Functions</span>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- EDUCATION -->
-
-<section class="education">
-
-    <div class="section-container">
-
-        <div class="section-label">
-            Education
-        </div>
-
-        <h2 class="section-title">
-            Academic background.
-        </h2>
-
-        <div class="education-grid">
-
-            <div class="education-card">
-
-                <h3>
-                    MSc Computer Science
-                </h3>
-
-                <p>
-                    Bharathiar University
-                </p>
-
-                <p>
-                    2017 — 2019
-                </p>
-
-            </div>
-
-
-            <div class="education-card">
-
-                <h3>
-                    BSc Computer Science
-                </h3>
-
-                <p>
-                    Bharathiar University
-                </p>
-
-                <p>
-                    2014 — 2017
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- CONTACT -->
+<!-- =========================
+     CONTACT
+========================= -->
 
 <section id="contact" class="contact">
 
-    <div class="section-container">
+    <div class="container">
 
         <div class="section-label">
-            Contact
+            Let's Connect
         </div>
 
-        <h2 class="section-title">
-            Let's connect.
+        <h2>
+            Interested in working together?
         </h2>
 
-        <p class="contact-text">
-            I'm interested in data analytics, business intelligence,
-            analytics engineering and data-focused product roles.
+        <p>
+            I'm open to Data Analyst, BI, Product Analytics
+            and Analytics-focused opportunities.
         </p>
 
-        <div class="buttons" style="justify-content:center;">
+        <div class="buttons"
+             style="justify-content:center;">
 
-            <a href="mailto:YOUR_EMAIL@example.com"
-               class="button button-primary">
-                Email Me
+            <a href="mailto:your-email@example.com"
+               class="btn btn-primary">
+
+                Get In Touch
+
             </a>
 
-            <a href="https://www.linkedin.com/"
-               class="button button-secondary">
-                LinkedIn
+        </div>
+
+
+        <div class="social-links"
+             style="margin-top:30px;">
+
+            <a href="https://github.com/krishnapriyadoraiswamy2210"
+               target="_blank">
+
+                <i class="fa-brands fa-github"></i>
+
+            </a>
+
+            <a href="#">
+
+                <i class="fa-brands fa-linkedin-in"></i>
+
             </a>
 
         </div>
@@ -1029,13 +1341,16 @@
 </section>
 
 
-<!-- FOOTER -->
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
-    © 2026 Krishnapriya Doraiswamy · Data Analyst & BI Professional
+    © 2026 Krishnapriya Doraiswamy · Built with HTML, CSS & GitHub Pages
 
 </footer>
+
 
 </body>
 </html>
