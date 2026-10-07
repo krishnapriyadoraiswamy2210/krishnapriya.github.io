@@ -84,13 +84,15 @@
         ========================= */
 
         .container {
-            max-width: 1150px;
-            margin: auto;
-            padding: 0 25px;
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 5vw;
         }
 
-        section {
-            padding: 90px 0;
+       section {
+            width: 100%;
+            padding: 90px 5vw;
         }
 
         .section-label {
